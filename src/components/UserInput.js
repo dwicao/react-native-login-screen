@@ -15,6 +15,8 @@ export default class UserInput extends Component {
 					style={styles.inlineImg} />
 				<TextInput style={styles.input}
 					placeholder={this.props.placeholder}
+					secureTextEntry={this.props.secureTextEntry}
+					autoCorrect={this.props.autoCorrect}
 					placeholderTextColor='white'
 					underlineColorAndroid='transparent' />
 			</View>
@@ -25,6 +27,8 @@ export default class UserInput extends Component {
 UserInput.propTypes = {
 	source: PropTypes.number.isRequired,
 	placeholder: PropTypes.string.isRequired,
+	secureTextEntry: PropTypes.bool,
+	autoCorrect: PropTypes.bool,
 };
 
 const DEVICE_WIDTH = Dimensions.get('window').width;

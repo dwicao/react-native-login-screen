@@ -22,7 +22,7 @@ export default class ButtonSubmit extends Component {
 			this.buttonAnimated,
 			{
 				toValue: 1,
-				duration: 600,
+				duration: 500,
 				easing: Easing.linear
 			}
 		).start();

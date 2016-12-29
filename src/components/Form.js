@@ -16,8 +16,13 @@ export default class Form extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
-				<UserInput source={usernameImg} placeholder='Username' />
-				<UserInput source={passwordImg} placeholder='Password' />
+				<UserInput source={usernameImg}
+					placeholder='Username'
+					autoCorrect={false} />
+				<UserInput source={passwordImg}
+					secureTextEntry={true}
+					placeholder='Password'
+					autoCorrect={false} />
 				<ButtonSubmit />
 				<SignupSection />
 			</View>
