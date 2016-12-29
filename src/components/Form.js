@@ -18,10 +18,14 @@ export default class Form extends Component {
 			<View style={styles.container}>
 				<UserInput source={usernameImg}
 					placeholder='Username'
+					autoCapitalize={'none'}
+					returnKeyType={'done'}
 					autoCorrect={false} />
 				<UserInput source={passwordImg}
 					secureTextEntry={true}
 					placeholder='Password'
+					returnKeyType={'done'}
+					autoCapitalize={'none'}
 					autoCorrect={false} />
 				<ButtonSubmit />
 				<SignupSection />

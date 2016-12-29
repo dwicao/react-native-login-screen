@@ -17,6 +17,8 @@ export default class UserInput extends Component {
 					placeholder={this.props.placeholder}
 					secureTextEntry={this.props.secureTextEntry}
 					autoCorrect={this.props.autoCorrect}
+					autoCapitalize={this.props.autoCapitalize}
+					returnKeyType={this.props.returnKeyType}
 					placeholderTextColor='white'
 					underlineColorAndroid='transparent' />
 			</View>
@@ -29,6 +31,8 @@ UserInput.propTypes = {
 	placeholder: PropTypes.string.isRequired,
 	secureTextEntry: PropTypes.bool,
 	autoCorrect: PropTypes.bool,
+	autoCapitalize: PropTypes.string,
+	returnKeyType: PropTypes.string,
 };
 
 const DEVICE_WIDTH = Dimensions.get('window').width;

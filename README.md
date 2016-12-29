@@ -1,10 +1,10 @@
 # react-native-login-screen
 ![demo](https://raw.githubusercontent.com/dwicao/react-native-login-screen/master/demo_pic.gif)  
 
-Main Screen is completed, but need some functionality.
+Login Screen is completed, but need some screen transition.
 
 ## Todo  
-* Animated API
-* Navigator (react-native-router-flux)
+* ~~Animated API~~
+* ~~Navigator (react-native-router-flux)~~
 
 
