@@ -9,8 +9,8 @@ import UserInput from './UserInput';
 import ButtonSubmit from './ButtonSubmit';
 import SignupSection from './SignupSection';
 
-import usernameImg from '../image/username.png';
-import passwordImg from '../image/password.png';
+import usernameImg from '../images/username.png';
+import passwordImg from '../images/password.png';
 
 export default class Form extends Component {
 	render() {

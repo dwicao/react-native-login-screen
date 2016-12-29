@@ -6,17 +6,24 @@ import {
 	Text,
 	Animated,
 	Easing,
+	Image,
 } from 'react-native';
+
+import spinner from '../images/loading.gif';
 
 export default class ButtonSubmit extends Component {
 	constructor() {
 		super();
 
+		this.state = {
+			isLoading: false,
+		};
 		this._onPress = this._onPress.bind(this);
 		this.buttonAnimated = new Animated.Value(0);
 	}
 
 	_onPress() {
+		this.setState({ isLoading: true });
 		this.buttonAnimated.setValue(0);
 		Animated.timing(
 			this.buttonAnimated,
@@ -28,11 +35,19 @@ export default class ButtonSubmit extends Component {
 		).start();
 	}
 
+	textOrGif() {
+		if (this.state.isLoading) {
+			return <Image source={spinner} style={{width: 24, height: 24}} />;
+		} else {
+			return <Text style={styles.text}>LOGIN</Text>;
+		}
+	}
+
 	render() {
 		const DEVICE_WIDTH = Dimensions.get('window').width;
 		const moveWidth = this.buttonAnimated.interpolate({
 	    inputRange: [0, 1],
-	    outputRange: [DEVICE_WIDTH - 40, 80]
+	    outputRange: [DEVICE_WIDTH - 40, 40]
 	  });
 
 		return (
@@ -40,7 +55,7 @@ export default class ButtonSubmit extends Component {
 				<TouchableOpacity style={styles.button}
 					onPress={this._onPress}
 					activeOpacity={0.7} >
-						<Text style={styles.text}>LOGIN</Text>
+						{this.textOrGif()}
 				</TouchableOpacity>
 			</Animated.View>
 		);
