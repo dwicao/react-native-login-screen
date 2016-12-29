@@ -8,6 +8,7 @@ import {
 	Easing,
 	Image,
 } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 
 import spinner from '../images/loading.gif';
 
@@ -23,16 +24,23 @@ export default class ButtonSubmit extends Component {
 	}
 
 	_onPress() {
+		if (this.state.isLoading) return;
+
 		this.setState({ isLoading: true });
 		this.buttonAnimated.setValue(0);
+		
 		Animated.timing(
 			this.buttonAnimated,
 			{
 				toValue: 1,
-				duration: 500,
+				duration: 200,
 				easing: Easing.linear
 			}
 		).start();
+		
+		setTimeout(() => {
+			Actions.SecondScreen();
+		}, 2000);
 	}
 
 	textOrGif() {
