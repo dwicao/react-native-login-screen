@@ -27,8 +27,8 @@ export default class Form extends Component {
 					returnKeyType={'done'}
 					autoCapitalize={'none'}
 					autoCorrect={false} />
-				<ButtonSubmit />
 				<SignupSection />
+				<ButtonSubmit />
 			</View>
 		);
 	}
@@ -41,28 +41,5 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		alignItems: 'center',
-		flexDirection: 'column',
-	},
-	input: {
-		backgroundColor: 'rgba(255, 255, 255, 0.4)',
-		width: DEVICE_WIDTH - 40,
-		height: 40,
-		marginVertical: 7,
-		marginHorizontal: 20,
-		paddingLeft: 45,
-		borderRadius: 20,
-		color: '#ffffff',
-	},
-	inputWrapper: {
-		flex: 0,
-		flexDirection: 'row',
-	},
-	inlineImg: {
-		position: 'absolute',
-		zIndex: 99,
-		width: 22,
-		height: 22,
-		left: 35,
-		top: 16,
 	},
 });

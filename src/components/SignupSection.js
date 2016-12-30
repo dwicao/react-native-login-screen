@@ -22,8 +22,7 @@ const DEVICE_HEIGHT = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
-		marginVertical: 20,
+		marginTop: 60,
 		width: DEVICE_WIDTH,
 		flexDirection: 'row',
 		justifyContent: 'space-around',

@@ -4,7 +4,7 @@
 Login Screen is completed, but need some screen transition.
 
 ## Todo  
-* ~~Animated API~~
-* ~~Navigator (react-native-router-flux)~~
-
+* Fix circleGrow on Android  
+* √ ~~Animated API~~  
+* √ ~~Navigator (react-native-router-flux)~~
 
