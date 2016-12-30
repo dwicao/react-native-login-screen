@@ -9,17 +9,15 @@ export default class App extends Component {
 	  return (
 	    <Router>
 	      <Scene key="root">
-	        <Scene key="LoginScreen"
+	        <Scene key="loginScreen"
 	          component={LoginScreen}
-	          title="React Native"
 	          hideNavBar={true}
-	          initial
+	          initial={true}
 	        />
 	        <Scene
-	          key="SecondScreen"
+	          key="secondScreen"
 	          component={SecondScreen}
 	          hideNavBar={true}
-	          title="Welcome"
 	        />
 	      </Scene>
 	    </Router>

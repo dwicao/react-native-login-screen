@@ -5,7 +5,7 @@ import {
 	Text,
 	TouchableOpacity,
 } from 'react-native';
-import { Actions } from 'react-native-router-flux';
+import { Actions, ActionConst } from 'react-native-router-flux';
 
 export default class SecondScreen extends Component {
 	constructor() {
@@ -15,7 +15,7 @@ export default class SecondScreen extends Component {
 	}
 
 	_onPress() {
-		Actions.LoginScreen();
+		Actions.loginScreen({type: ActionConst.RESET});
 	}
 
 	render() {

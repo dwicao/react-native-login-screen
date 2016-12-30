@@ -7,8 +7,9 @@ import {
 	Animated,
 	Easing,
 	Image,
+	Alert,
 } from 'react-native';
-import { Actions } from 'react-native-router-flux';
+import { Actions, ActionConst } from 'react-native-router-flux';
 
 import spinner from '../images/loading.gif';
 
@@ -39,16 +40,8 @@ export default class ButtonSubmit extends Component {
 		).start();
 		
 		setTimeout(() => {
-			Actions.SecondScreen();
+			Actions.secondScreen({type: ActionConst.RESET});
 		}, 2000);
-	}
-
-	textOrGif() {
-		if (this.state.isLoading) {
-			return <Image source={spinner} style={{width: 24, height: 24}} />;
-		} else {
-			return <Text style={styles.text}>LOGIN</Text>;
-		}
 	}
 
 	render() {
@@ -63,7 +56,11 @@ export default class ButtonSubmit extends Component {
 				<TouchableOpacity style={styles.button}
 					onPress={this._onPress}
 					activeOpacity={0.7} >
-						{this.textOrGif()}
+						{(this.state.isLoading) ? 
+							<Image source={spinner} style={{width: 24, height: 24}} />
+							:
+							<Text style={styles.text}>LOGIN</Text>
+						}
 				</TouchableOpacity>
 			</Animated.View>
 		);
