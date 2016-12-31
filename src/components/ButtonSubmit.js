@@ -50,7 +50,7 @@ export default class ButtonSubmit extends Component {
 		}, 2000);
 
 		setTimeout(() => {
-			Actions.secondScreen({type: ActionConst.RESET})
+			Actions.secondScreen({type: ActionConst.RESET});
 		}, 2500);
 	}
 
@@ -59,7 +59,7 @@ export default class ButtonSubmit extends Component {
 			this.growAnimated,
 			{
 				toValue: 1,
-				duration: 300,
+				duration: 200,
 				easing: Easing.linear
 			}
 		).start();
@@ -72,7 +72,7 @@ export default class ButtonSubmit extends Component {
 	  });
 	  const changeScale = this.growAnimated.interpolate({
 	    inputRange: [0, 1],
-	    outputRange: [1, 30]
+	    outputRange: [1, MARGIN]
 	  });
 
 		return (
@@ -87,7 +87,7 @@ export default class ButtonSubmit extends Component {
 								<Text style={styles.text}>LOGIN</Text>
 							}
 					</TouchableOpacity>
-				<Animated.View style={[ styles.circle, {transform: [{scale: changeScale}]} ]} />
+					<Animated.View style={[ styles.circle, {transform: [{scale: changeScale}]} ]} />
 				</Animated.View>
 			</View>
 		);
@@ -113,6 +113,8 @@ const styles = StyleSheet.create({
 		height: MARGIN,
 		width: MARGIN,
 		marginTop: -MARGIN,
+		borderWidth: 1,
+		borderColor: '#F035E0',
 		borderRadius: 100,
 		alignSelf: 'center',
 		zIndex: 99,
