@@ -8,6 +8,7 @@ import {
 	Easing,
 	Image,
 	Alert,
+	View,
 } from 'react-native';
 import { Actions, ActionConst } from 'react-native-router-flux';
 
@@ -15,7 +16,7 @@ import spinner from '../images/loading.gif';
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
-const _MARGIN = 40;
+const MARGIN = 40;
 
 export default class ButtonSubmit extends Component {
 	constructor() {
@@ -50,7 +51,7 @@ export default class ButtonSubmit extends Component {
 
 		setTimeout(() => {
 			Actions.secondScreen({type: ActionConst.RESET})
-		}, 2400);
+		}, 2500);
 	}
 
 	_onGrow() {
@@ -58,7 +59,7 @@ export default class ButtonSubmit extends Component {
 			this.growAnimated,
 			{
 				toValue: 1,
-				duration: 200,
+				duration: 300,
 				easing: Easing.linear
 			}
 		).start();
@@ -67,26 +68,28 @@ export default class ButtonSubmit extends Component {
 	render() {
 		const changeWidth = this.buttonAnimated.interpolate({
 	    inputRange: [0, 1],
-	    outputRange: [DEVICE_WIDTH - _MARGIN, _MARGIN]
+	    outputRange: [DEVICE_WIDTH - MARGIN, MARGIN]
 	  });
 	  const changeScale = this.growAnimated.interpolate({
 	    inputRange: [0, 1],
-	    outputRange: [1, DEVICE_HEIGHT * 2]
+	    outputRange: [1, 30]
 	  });
 
 		return (
-			<Animated.View style={[styles.container, {width: changeWidth}]}>
-				<TouchableOpacity style={styles.button}
-					onPress={this._onPress}
-					activeOpacity={0.7} >
-						{(this.state.isLoading) ? 
-							<Image source={spinner} style={{width: 24, height: 24}} />
-							:
-							<Text style={styles.text}>LOGIN</Text>
-						}
-				</TouchableOpacity>
-				<Animated.View style={[styles.circle, {transform: [{scale: changeScale}]}]} />
-			</Animated.View>
+			<View style={styles.container}>
+				<Animated.View style={{width: changeWidth}}>
+					<TouchableOpacity style={styles.button}
+						onPress={this._onPress}
+						activeOpacity={1} >
+							{this.state.isLoading ? 
+								<Image source={spinner} style={styles.image} />
+								:
+								<Text style={styles.text}>LOGIN</Text>
+							}
+					</TouchableOpacity>
+				<Animated.View style={[ styles.circle, {transform: [{scale: changeScale}]} ]} />
+				</Animated.View>
+			</View>
 		);
 	}
 }
@@ -95,26 +98,32 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		marginTop: -80,
+		height: 500,
 	},
 	button: {
 		alignItems: 'center',
 		justifyContent: 'center',
 		backgroundColor: '#F035E0',
-		height: _MARGIN,
+		height: MARGIN,
 		marginTop: 10,
 		borderRadius: 20,
+		zIndex: 100,
 	},
 	circle: {
-		alignSelf: 'center',
-		marginTop: -20,
-		height: 1,
-		width: 1,
+		height: MARGIN,
+		width: MARGIN,
+		marginTop: -MARGIN,
 		borderRadius: 100,
-		backgroundColor: '#F035E0',
+		alignSelf: 'center',
 		zIndex: 99,
+		backgroundColor: '#F035E0',
 	},
 	text: {
 		color: 'white',
 		backgroundColor: 'transparent',
+	},
+	image: {
+		width: 24,
+		height: 24,
 	},
 });

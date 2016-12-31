@@ -4,7 +4,7 @@ import { Router, Scene } from 'react-native-router-flux';
 import LoginScreen from './LoginScreen';
 import SecondScreen from './SecondScreen';
 
-export default class App extends Component {
+export default class Main extends Component {
   render() {
 	  return (
 	    <Router>

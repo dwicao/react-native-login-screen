@@ -6,13 +6,13 @@ import {
   View
 } from 'react-native';
 
-import Home from './src/components/Home';
+import Main from './src/components/Main';
 
 export default class loginAnimation extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Home />
+        <Main />
       </View>
     );
   }

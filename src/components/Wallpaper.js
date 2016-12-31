@@ -17,9 +17,6 @@ export default class Wallpaper extends Component {
 	}
 }
 
-const DEVICE_WIDTH = Dimensions.get('window').width;
-const DEVICE_HEIGHT = Dimensions.get('window').height;
-
 const styles = StyleSheet.create({
 	picture: {
 		flex: 1,

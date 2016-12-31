@@ -23,7 +23,7 @@ export default class SecondScreen extends Component {
 			<View style={styles.container}>
 				<TouchableOpacity onPress={this._onPress}
 					style={styles.button}>
-					<Text>{'<'} Back To Login</Text>
+					<Text>{'<<'} Back To Login</Text>
 				</TouchableOpacity>
 			</View>
 		);

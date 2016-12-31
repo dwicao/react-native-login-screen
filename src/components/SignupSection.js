@@ -30,5 +30,5 @@ const styles = StyleSheet.create({
 	text: {
 		color: 'white',
 		backgroundColor: 'transparent',
-	}
+	},
 });
