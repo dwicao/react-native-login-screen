@@ -34,13 +34,13 @@ export default class SecondScreen extends Component {
 			this.growAnimated,
 			{
 				toValue: 1,
-				duration: 200,
+				duration: 300,
 				easing: Easing.linear,
 			}
 		).start();
 
 		setTimeout(() => {
-			Actions.loginScreen({type: ActionConst.REPLACE});
+			Actions.pop();
 		}, 500);
 	}
 

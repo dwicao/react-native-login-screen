@@ -35,7 +35,6 @@ export default class ButtonSubmit extends Component {
 		if (this.state.isLoading) return;
 
 		this.setState({ isLoading: true });
-
 		Animated.timing(
 			this.buttonAnimated,
 			{
@@ -50,8 +49,11 @@ export default class ButtonSubmit extends Component {
 		}, 2000);
 
 		setTimeout(() => {
-			Actions.secondScreen({type: ActionConst.PUSH});
-		}, 2500);
+			Actions.secondScreen();
+			this.setState({ isLoading: false });
+			this.buttonAnimated.setValue(0);
+			this.growAnimated.setValue(0);
+		}, 2300);
 	}
 
 	_onGrow() {
