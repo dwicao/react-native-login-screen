@@ -2,9 +2,7 @@
 ![demo](https://raw.githubusercontent.com/dwicao/react-native-login-screen/master/demo.gif)  
 
 ## Todo
-- [ ] Make "Forgot Password?" screen
-- [ ] Make "Create Account" screen 
-- [x] Make circle grow on Android more smooth  
+- [x] ~~Make circle grow on Android more smooth~~
 - [x] ~~Add animation on press back~~  
 - [x]  ~~Add back button~~  
 - [x]  ~~Fix circleGrow on Android~~  
