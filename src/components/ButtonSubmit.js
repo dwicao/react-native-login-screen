@@ -50,7 +50,7 @@ export default class ButtonSubmit extends Component {
 		}, 2000);
 
 		setTimeout(() => {
-			Actions.secondScreen({type: ActionConst.RESET});
+			Actions.secondScreen({type: ActionConst.PUSH});
 		}, 2500);
 	}
 

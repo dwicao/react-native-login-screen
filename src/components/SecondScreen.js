@@ -40,7 +40,7 @@ export default class SecondScreen extends Component {
 		).start();
 
 		setTimeout(() => {
-			Actions.loginScreen({type: ActionConst.RESET});
+			Actions.loginScreen({type: ActionConst.REPLACE});
 		}, 500);
 	}
 

@@ -11,12 +11,13 @@ export default class Main extends Component {
 	      <Scene key="root">
 	        <Scene key="loginScreen"
 	          component={LoginScreen}
+	        	animation='fade'
 	          hideNavBar={true}
 	          initial={true}
 	        />
-	        <Scene
-	          key="secondScreen"
+	        <Scene key="secondScreen"
 	          component={SecondScreen}
+	          animation='fade'
 	          hideNavBar={true}
 	        />
 	      </Scene>

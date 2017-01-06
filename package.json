@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "codepush-key": "code-push deployment ls drumkit -k",
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "codepush-key": "code-push deployment ls drumkit -k",
     "adb-reverse": "adb reverse tcp:8081 tcp:8081",
     "ios-dev": "react-native run-ios --simulator='iPhone 5'",
     "ios-codepush-staging": "code-push release-react drumkit ios",

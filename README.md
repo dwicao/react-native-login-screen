@@ -2,12 +2,14 @@
 ![demo](https://raw.githubusercontent.com/dwicao/react-native-login-screen/master/demo_app.gif)  
 
 ## Todo
-* [ ] Make circle grow on Android more smooth  
-√ ~~Add animation on press back~~  
-√ ~~Add back button~~  
-√ ~~Fix circleGrow on Android~~  
-√ ~~Animated API~~  
-√ ~~Navigator (react-native-router-flux)~~
+- [ ] Make "Forgot Password?" screen
+- [ ] Make "Create Account" screen 
+- [x] Make circle grow on Android more smooth  
+- [x] ~~Add animation on press back~~  
+- [x]  ~~Add back button~~  
+- [x]  ~~Fix circleGrow on Android~~  
+- [x]  ~~Animated API~~  
+- [x]  ~~Navigator (react-native-router-flux)~~
 
 ## Install at local
 Open Terminal, then type command:  
