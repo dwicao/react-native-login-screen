@@ -43,7 +43,7 @@ export default class ButtonSubmit extends Component {
 				easing: Easing.linear
 			}
 		).start();
-		
+
 		setTimeout(() => {
 			this._onGrow();
 		}, 2000);
@@ -83,7 +83,7 @@ export default class ButtonSubmit extends Component {
 					<TouchableOpacity style={styles.button}
 						onPress={this._onPress}
 						activeOpacity={1} >
-							{this.state.isLoading ? 
+							{this.state.isLoading ?
 								<Image source={spinner} style={styles.image} />
 								:
 								<Text style={styles.text}>LOGIN</Text>
@@ -99,15 +99,15 @@ export default class ButtonSubmit extends Component {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		marginTop: -80,
-		height: 500,
+		top: -95,
+		alignItems: 'center',
+		justifyContent: 'flex-start',
 	},
 	button: {
 		alignItems: 'center',
 		justifyContent: 'center',
 		backgroundColor: '#F035E0',
 		height: MARGIN,
-		marginTop: 10,
 		borderRadius: 20,
 		zIndex: 100,
 	},

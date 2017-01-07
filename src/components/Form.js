@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import Dimensions from 'Dimensions';
 import {
 	StyleSheet,
+	KeyboardAvoidingView,
 	View,
 } from 'react-native';
 
@@ -15,7 +16,8 @@ import passwordImg from '../images/password.png';
 export default class Form extends Component {
 	render() {
 		return (
-			<View style={styles.container}>
+			<KeyboardAvoidingView behavior='padding'
+				style={styles.container}>
 				<UserInput source={usernameImg}
 					placeholder='Username'
 					autoCapitalize={'none'}
@@ -27,16 +29,17 @@ export default class Form extends Component {
 					returnKeyType={'done'}
 					autoCapitalize={'none'}
 					autoCorrect={false} />
-				<SignupSection />
-				<ButtonSubmit />
-			</View>
+			</KeyboardAvoidingView>
 		);
 	}
 }
+
+const DEVICE_WIDTH = Dimensions.get('window').width;
+const DEVICE_HEIGHT = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		alignItems: 'center',
-	},
+	}
 });
