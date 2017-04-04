@@ -9,7 +9,7 @@ import {
 	Image,
 } from 'react-native';
 
-const eye = require('../../eye_black.png');
+const eye = require('../images/eye_black.png');
 
 import UserInput from './UserInput';
 import ButtonSubmit from './ButtonSubmit';
@@ -19,8 +19,8 @@ import usernameImg from '../images/username.png';
 import passwordImg from '../images/password.png';
 
 export default class Form extends Component {
-	constructor(props) {
-    super(props);
+	constructor() {
+    super();
     this.state = {
 			showPass: true,
 		};
