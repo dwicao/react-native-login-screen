@@ -9,21 +9,22 @@ import {
 	Image,
 } from 'react-native';
 
-const eye = require('../images/eye_black.png');
-
 import UserInput from './UserInput';
 import ButtonSubmit from './ButtonSubmit';
 import SignupSection from './SignupSection';
 
 import usernameImg from '../images/username.png';
 import passwordImg from '../images/password.png';
+import eyeImg  from '../images/eye_black.png';
 
 export default class Form extends Component {
-	constructor() {
-    super();
+	constructor(props) {
+    super(props);
     this.state = {
 			showPass: true,
+			press: false,
 		};
+		this.showPass = this.showPass.bind(this);
 	}
 
 	showPass() {
@@ -48,9 +49,9 @@ export default class Form extends Component {
 					<TouchableOpacity
 						activeOpacity={0.7}
 						style={styles.btnEye}
-						onPress={() => this.showPass()}
+						onPress={this.showPass}
 					>
-						<Image source={eye} style={styles.iconEye} />
+						<Image source={eyeImg} style={styles.iconEye} />
 					</TouchableOpacity>
 			</KeyboardAvoidingView>
 		);
