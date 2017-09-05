@@ -62,11 +62,11 @@ const DEVICE_WIDTH = Dimensions.get('window').width;
 const DEVICE_HEIGHT = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		alignItems: 'center',
-	},
-	btnEye: {
+  container: {
+    flex: 1,
+    alignItems: 'center',
+  },
+  btnEye: {
     position: 'absolute',
     top: 55,
     right: 28,
