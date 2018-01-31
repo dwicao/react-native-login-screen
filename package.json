@@ -23,15 +23,16 @@
     "android-bundle": "react-native bundle --platform android --dev false --entry-file ./index.android.js --bundle-output ./android/app/src/main/assets/index.android.bundle --sourcemap-output ./android/app/src/main/assets/index.android.map --assets-dest ./android/app/src/main/res/"
   },
   "dependencies": {
-    "react": "15.4.1",
-    "react-native": "0.39.2",
+    "prop-types": "^15.6.0",
+    "react": "16.2.0",
+    "react-native": "0.52.2",
     "react-native-router-flux": "^3.37.0"
   },
   "devDependencies": {
-    "babel-jest": "18.0.0",
-    "babel-preset-react-native": "1.9.1",
-    "jest": "18.0.0",
-    "react-test-renderer": "15.4.1"
+    "babel-jest": "^18.0.0",
+    "babel-preset-react-native": "^1.9.2",
+    "jest": "^18.1.0",
+    "react-test-renderer": "15.6.2"
   },
   "jest": {
     "preset": "react-native"
