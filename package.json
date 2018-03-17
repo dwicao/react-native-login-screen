@@ -23,6 +23,7 @@
     "android-bundle": "react-native bundle --platform android --dev false --entry-file ./index.android.js --bundle-output ./android/app/src/main/assets/index.android.bundle --sourcemap-output ./android/app/src/main/assets/index.android.map --assets-dest ./android/app/src/main/res/"
   },
   "dependencies": {
+    "prop-types": "^15.6.1",
     "react": "15.4.1",
     "react-native": "0.39.2",
     "react-native-router-flux": "^3.37.0"
